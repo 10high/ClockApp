@@ -50,3 +50,22 @@ const displayClock = async () => {
 
 displayClock();
 
+const apiQuote = async () => {
+    try {
+        const resolved = await fetch(`https://api.quotable.io/random?tags=technology`);
+        const data = await resolved.json();
+        return data;
+    }
+    catch (error) {
+        console.log("this is the APIQuote fetch error: ", error);
+    }
+}
+
+
+const displayQuote = async () => {
+    const data = await apiQuote();
+    document.querySelector(".quote__text").innerText = data.content;
+    document.querySelector(".quote__author").innerText = data.author;
+}
+
+displayQuote();
