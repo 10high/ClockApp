@@ -36,6 +36,17 @@ const apiLocation = async () => {
     }
 }
 
+const apiQuote = async () => {
+    try {
+        const resolved = await fetch(`https://api.quotable.io/random?tags=technology`);
+        const data = await resolved.json();
+        return data;
+    }
+    catch (error) {
+        console.log("this is the APIQuote fetch error: ", error);
+    }
+}
+
 
 const welcomeMessageIconManager = {
     buildClockWelcomeMessageIconSun() {
@@ -91,30 +102,20 @@ const prepareWelcomeMessageText = () => {
     return welcomeMessage;
 }
 
-
-
-const displayClock = async () => {
-    await apiTime();
+const displayWelcomeMessage = () => {
     document.querySelector(".clock__welcomeMessageWrapper").prepend(welcomeMessageIconManager.buildWelcomeMessageIcon());
     document.querySelector(".clock__welcomeMessage").innerText = prepareWelcomeMessageText();
-    document.querySelector(".clock__time").innerText = `${clockData.hours}:${clockData.minutes}`;
-    document.querySelector(".clock__timezone").innerText = clockData.timezoneAbbreviation;
-    /* await apiLocation();
-    document.querySelector(".clock__city").innerText = clockData.city;
-    document.querySelector(".clock__country").innerText = clockData.countryAbbreviated; */
 }
 
-displayClock();
 
-const apiQuote = async () => {
-    try {
-        const resolved = await fetch(`https://api.quotable.io/random?tags=technology`);
-        const data = await resolved.json();
-        return data;
-    }
-    catch (error) {
-        console.log("this is the APIQuote fetch error: ", error);
-    }
+const displayTime = () => {
+    document.querySelector(".clock__time").innerText = `${clockData.hours}:${clockData.minutes}`;
+    document.querySelector(".clock__timezone").innerText = clockData.timezoneAbbreviation;
+}
+
+const displayLocation = () => {
+    document.querySelector(".clock__city").innerText = clockData.city;
+    document.querySelector(".clock__country").innerText = clockData.countryAbbreviated;
 }
 
 
@@ -124,10 +125,27 @@ const displayQuote = async () => {
     document.querySelector(".quote__author").innerText = data.author;
 }
 
-displayQuote();
+const displayStats = () => {
+    document.querySelector("#statsTimezone").innerText = clockData.timezoneFull;
+    document.querySelector("#statsDayOfYear").innerText = clockData.dayOfYear;
+    document.querySelector("#statsDayOfWeek").innerText = clockData.dayOfWeek;
+    document.querySelector("#statsWeekNumber").innerText = clockData.weekNumber;
+}
 
 
 
+
+const initialFetchApisAndDisplayContent = async () => {
+    await apiTime();
+    displayWelcomeMessage();
+    displayTime();
+    displayStats();
+    /* await apiLocation();
+    displayLocation();  */
+    await displayQuote();
+}
+
+initialFetchApisAndDisplayContent();
 
 
 
