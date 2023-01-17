@@ -57,18 +57,18 @@ const prepareWelcomeMessageText = () => {
 }
 
 const displayWelcomeMessage = () => {
-    document.querySelector(".clock__welcomeMessageWrapper").prepend(welcomeMessageIconManager.buildWelcomeMessageIcon());
-    document.querySelector(".clock__welcomeMessage").innerText = prepareWelcomeMessageText();
+    document.querySelector("#clockWelcomeMessageWrapper").prepend(welcomeMessageIconManager.buildWelcomeMessageIcon());
+    document.querySelector("#clockWelcomeMessage").innerText = prepareWelcomeMessageText();
 }
 
 const displayTime = () => {
-    document.querySelector(".clock__time").innerText = `${clockData.hours}:${clockData.minutes}`;
-    document.querySelector(".clock__timezone").innerText = clockData.timezoneAbbreviation;
+    document.querySelector("#clockTime").innerText = `${clockData.hours}:${clockData.minutes}`;
+    document.querySelector("#clockTimezone").innerText = clockData.timezoneAbbreviation;
 }
 
 const displayLocation = () => {
-    document.querySelector(".clock__city").innerText = clockData.city;
-    document.querySelector(".clock__country").innerText = clockData.countryAbbreviated;
+    document.querySelector("#clockCity").innerText = clockData.city;
+    document.querySelector("#clockCountry").innerText = clockData.countryAbbreviated;
 }
 
 const displayClock = async () => {
