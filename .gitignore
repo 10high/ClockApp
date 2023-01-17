@@ -17,3 +17,9 @@
 .prettierignore
 _exclude/
 _apiKeys/
+node_modules/
+package-lock.json
+package.json
+.parcelrc
+.parcel-cache/
+dist/
