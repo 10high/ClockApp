@@ -14,32 +14,36 @@
 
 <body>
   <main>
+    <div id="quoteContainer" class="quote__container quote__container--expand">
 
-    <figure class="quote">
-      <blockquote class="quote__text">
-        This is dummy quote text
-      </blockquote>
-      <figcaption class="quote__author">Author Name</figcaption>
-    </figure>
+      <figure id="quote" class="quote quote--visible">
+        <blockquote id="quoteText" class="quote__text">
+          This is dummy quote text
+        </blockquote>
+        <figcaption id="quoteAuthor" class="quote__author">Author Name</figcaption>
+      </figure>
+    </div>
 
     <article class="clock">
-      <div class="clock__welcomeMessageWrapper">
-        <h2> <span class="clock__welcomeMessage">Good morning(dummy)</span><span
+      <div id="clockWelcomeMessageWrapper" class="clock__welcomeMessageWrapper">
+        <h2> <span id="clockWelcomeMessage" class="clock__welcomeMessage">Good morning(dummy)</span><span
             class="clock__welcomeMessage--toggleDisplay">, it's
             currently</span> </h2>
       </div>
-      <p><span class="clock__time">12:00(dummy)</span> <span class="clock__timezone">CET(dummy)</span></p>
-      <p>in <span class="clock__city">Dortmund(dummy)</span>, <span class="clock__country">DE(dummy)</span>
+      <p><span id="clockTime" class="clock__time">12:00(dummy)</span> <span id="clockTimezone"
+          class="clock__timezone">CET(dummy)</span></p>
+      <p>in <span id="clockCity" class="clock__city">Dortmund(dummy)</span>, <span id="clockCountry"
+          class="clock__country">DE(dummy)</span>
       </p>
     </article>
 
     <div class="button">
-      <button class="button__more" type="button"><span class="button__text">More</span> <svg class="button__icon"
-          width="14" height="9" xmlns="http://www.w3.org/2000/svg">
+      <button id="buttonMore" class="button__more" type="button"><span class="button__text">More</span> <svg
+          class="button__icon" width="14" height="9" xmlns="http://www.w3.org/2000/svg">
           <path stroke="#FFF" stroke-width="2" fill="none" d="m1 1 6 6 6-6" />
         </svg></button>
-      <button class="button__less" type="button" hidden="true"><span class="button__text">Less</span> <svg
-          class="button__icon" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+      <button id="buttonLess" class="button__less" type="button" hidden="true"><span class="button__text">Less</span>
+        <svg class="button__icon" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fill-rule="evenodd">
             <circle fill="#303030" cx="20" cy="20" r="20" />
             <path stroke="#FFF" stroke-width="2" d="M14 23l6-6 6 6" />
@@ -47,28 +51,30 @@
         </svg></button>
     </div>
 
-    <article class="stats">
-      <div class="stats_wrapper">
-        <article>
-          <h2>current timezone</h2>
-          <p id="statsTimezone">Europe/London(dummy)</p>
-        </article>
-        <article>
-          <h2>day of the year</h2>
-          <p id="statsDayOfYear">295(dummy)</p>
-        </article>
-      </div>
-      <div class="stats_wrapper">
-        <article>
-          <h2>day of the week</h2>
-          <p id="statsDayOfWeek">5(dummy)</p>
-        </article>
-        <article>
-          <h2>week number</h2>
-          <p id="statsWeekNumber">40(dummy)</p>
-        </article>
-      </div>
-    </article>
+    <div id="statsContainer" class="stats__container stats__container--shrink">
+      <article id="stats" class="stats--hidden">
+        <div class="stats_wrapper">
+          <article>
+            <h2>current timezone</h2>
+            <p id="statsTimezone">Europe/London(dummy)</p>
+          </article>
+          <article>
+            <h2>day of the year</h2>
+            <p id="statsDayOfYear">295(dummy)</p>
+          </article>
+        </div>
+        <div class="stats_wrapper">
+          <article>
+            <h2>day of the week</h2>
+            <p id="statsDayOfWeek">5(dummy)</p>
+          </article>
+          <article>
+            <h2>week number</h2>
+            <p id="statsWeekNumber">40(dummy)</p>
+          </article>
+        </div>
+      </article>
+    </div>
 
   </main>
 
