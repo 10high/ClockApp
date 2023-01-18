@@ -1,3 +1,46 @@
 @import "./global/normalize.css";
 @import "./components/quote.css";
 @import "./components/stats.css";
+
+@custom-media --minTabletWidth (min-width: 768px);
+@custom-media --minDesktopWidth (min-width: 1440px);
+
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.backgroundImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backgroundImage--day {
+    background-image: url(./assets/mobile/bg-image-daytime.jpg);
+
+    @media (--minTabletWidth) {
+        background-image: url(./assets/tablet/bg-image-daytime.jpg);
+    }
+
+    @media (--minDesktopWidth) {
+        background-image: url(./assets/desktop/bg-image-daytime.jpg);
+    }
+}
+
+.backgroundImage--night {
+    background-image: url(./assets/mobile/bg-image-nighttime.jpg);
+
+    @media (--minTabletWidth) {
+        background-image: url(./assets/tablet/bg-image-nighttime.jpg);
+    }
+
+    @media (--minDesktopWidth) {
+        background-image: url(./assets/desktop/bg-image-nighttime.jpg);
+    }
+
+}
