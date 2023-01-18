@@ -1,9 +1,6 @@
 @import "./global/normalize.css";
 
-.quote__container {
-    border-style: solid;
-    border-color: red;
-}
+
 
 .quote__container--expand {
     height: 250px;
@@ -28,10 +25,7 @@
 }
 
 
-.stats__container {
-    border-style: solid;
-    border-color: red;
-}
+
 
 
 .stats__container--expand {
