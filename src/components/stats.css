@@ -1,0 +1,22 @@
+.stats__container--expand {
+    height: 366px;
+    transition: height 0.25s ease-in-out;
+}
+
+.stats__container--shrink {
+    height: 0;
+    transition: height 0.25s ease-in-out;
+}
+
+
+.stats--hidden {
+    visibility: collapse;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.stats--visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
