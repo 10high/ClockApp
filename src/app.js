@@ -1,6 +1,8 @@
 import { displayClock } from "./components/clock";
 import { displayStats } from "./components/stats";
 import { displayQuote } from "./components/quote";
+import { getRefreshElements } from "./components/quote";
+import { addRefreshAction } from "./components/quote";
 import { clockData } from "./global/clockData";
 
 import { addButtonAction } from "./components/button";
@@ -26,8 +28,10 @@ const manageBackgroundImage = () => {
 }
 
 
+getRefreshElements();
 initialFetchApisAndDisplayContent();
 manageBackgroundImage();
 addButtonAction();
+addRefreshAction();
 
 
