@@ -1,5 +1,6 @@
 @import "./global/normalize.css";
 @import "./global/font-families.css";
+@import "./global/customProperties.css";
 @import "./components/quote.css";
 @import "./components/stats.css";
 
