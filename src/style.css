@@ -1,10 +1,14 @@
 @import "./global/normalize.css";
+@import "./global/font-families.css";
 @import "./components/quote.css";
 @import "./components/stats.css";
 
 @custom-media --minTabletWidth (min-width: 768px);
 @custom-media --minDesktopWidth (min-width: 1440px);
 
+html {
+    font-family: 'Inter', sans-serif;
+}
 
 body {
     min-height: 100vh;
