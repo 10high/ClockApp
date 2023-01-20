@@ -1,3 +1,6 @@
+@custom-media --minTabletWidth (min-width: 768px);
+@custom-media --minDesktopWidth (min-width: 1440px);
+
 .stats__container--expand {
     height: 366px;
     transition: height 0.25s ease-in-out;
@@ -19,4 +22,98 @@
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in;
+}
+
+.stats {
+    width: 323px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (--minTabletWidth) {
+        width: 538px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    @media (--minDesktopWidth) {
+        width: 844px;
+    }
+}
+
+.stats__itemGroupWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (--minTabletWidth) {
+        /* flex-direction: row; */
+        gap: 48px;
+        justify-content: space-between;
+    }
+
+    @media (--minDesktopWidth) {
+        gap: 42px;
+    }
+}
+
+.stats__itemGroup {
+    display: flex;
+    justify-content: space-between;
+
+    @media (--minTabletWidth) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    @media (--minDesktopWidth) {
+        gap: 9px;
+    }
+
+}
+
+.stats__header {
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 2.8;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.125rem;
+    margin: 0;
+    color: var(--tertiaryColor);
+
+    @media (--minTabletWidth) {
+        font-size: 0.8125rem;
+        line-height: 2.153;
+        letter-spacing: 0.1625rem;
+    }
+
+    @media (--minDesktopWidth) {
+        font-size: 0.9375rem;
+        line-height: 1.866;
+        letter-spacing: 0.1875rem;
+    }
+}
+
+.stats__content {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.21;
+    text-align: right;
+    margin: 0;
+    color: var(--tertiaryColor);
+
+    @media (--minTabletWidth) {
+        font-size: 2.5rem;
+        line-height: 1.21025;
+        text-align: left;
+    }
+
+    @media (--minDesktopWidth) {
+        font-size: 3.5rem;
+        line-height: 1.2102;
+    }
 }
