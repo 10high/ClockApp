@@ -2,6 +2,7 @@
 @import "./global/font-families.css";
 @import "./global/customProperties.css";
 @import "./components/quote.css";
+@import "./components/clock.css";
 @import "./components/stats.css";
 
 @custom-media --minTabletWidth (min-width: 768px);
