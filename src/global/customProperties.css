@@ -2,4 +2,6 @@
     --primaryColor: #000000;
     --secondaryColor: #303030;
     --tertiaryColor: #FFFFFF;
+    --statsBackgroundColor: hsla(0, 0%, 100%, 0.75);
+    --statsFontColor: #303030;
 }

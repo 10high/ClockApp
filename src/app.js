@@ -6,7 +6,7 @@ import { addRefreshAction } from "./components/quote";
 import { clockData } from "./global/clockData";
 
 import { addButtonAction } from "./components/button";
-
+import { statsColors } from "./components/stats";
 
 
 const initialFetchApisAndDisplayContent = async () => {
@@ -33,5 +33,6 @@ initialFetchApisAndDisplayContent();
 manageBackgroundImage();
 addButtonAction();
 addRefreshAction();
+statsColors();
 
 
