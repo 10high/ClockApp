@@ -1,0 +1,25 @@
+@custom-media --minTabletWidth (min-width: 768px);
+@custom-media --minDesktopWidth (min-width: 1440px);
+
+.stack {
+    height: 272px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    @media (--minTabletWidth) {
+        height: 367px;
+    }
+
+    @media (--minDesktopWidth) {
+        height: auto;
+        width: 1110px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+
+}

@@ -2,7 +2,6 @@
 @custom-media --minDesktopWidth (min-width: 1440px);
 
 .clock {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -19,7 +18,7 @@
     line-height: 1.6667;
     letter-spacing: 0.1875rem;
     font-weight: 400;
-    margin: 0 0 0 16px;
+    margin: 0;
 
     @media (--minTabletWidth) {
         font-size: 1.125rem;
@@ -35,12 +34,16 @@
 }
 
 .clock__welcomeMessage--toggleDisplay {
-    visibility: hidden;
+    display: none;
 
     @media (--minTabletWidth) {
-        visibility: visible;
+        display: revert;
     }
 
+}
+
+.clock__timeWrapper {
+    margin: 16px 0 0 0;
 }
 
 .clock__time {
@@ -48,7 +51,7 @@
     line-height: 1;
     letter-spacing: -0.1563rem;
     font-weight: 700;
-    margin: 16px 5px 0 0;
+    margin: 0 5px 0 0;
 
     @media (--minTabletWidth) {
         font-size: 10.9375rem;
@@ -61,7 +64,7 @@
         font-size: 12.5rem;
         line-height: 1;
         letter-spacing: -0.3125rem;
-        margin: 16px 11px 0 0;
+        margin: 0 11px 0 0;
     }
 }
 
