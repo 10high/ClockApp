@@ -2,35 +2,66 @@
 @custom-media --minDesktopWidth (min-width: 1440px);
 
 .quote__container--expand {
-    height: 250px;
+    height: 323.33px;
+    margin: 31.67px 0 0 0;
     transition: height 0.25s ease-in-out;
+
+    @media (--minTabletWidth) {
+        height: 513px;
+        margin: 80px 0 0 0;
+    }
+
+    @media (--minDesktopWidth) {
+        height: 358px;
+        margin: 56px 0 0 0;
+    }
+
 }
 
 .quote__container--shrink {
-    height: 0;
+    height: 99px;
     transition: height 0.25s ease-in-out;
+
+    @media (--minTabletWidth) {
+        height: 153px;
+    }
+
+    @media (--minDesktopWidth) {
+        height: 56px;
+    }
+}
+
+.quote {
+    width: 324px;
+    color: var(--tertiaryColor);
+
+
+    @media (--minTabletWidth) {
+        width: 572.33px;
+    }
 }
 
 .quote--visible {
     visibility: visible;
     opacity: 1;
+    margin: 0 auto 0 auto;
     transition: all 0.25s ease-in-out;
+
+    @media (--minTabletWidth) {
+        margin: 0 auto 0 64px;
+    }
+
+    @media (--minDesktopWidth) {
+        margin: 0 auto 0 165px;
+    }
 }
 
 .quote--hidden {
     visibility: collapse;
     opacity: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     transition: all 0.25s ease-in-out;
-}
-
-.quote {
-    /* width: 324px; */
-    color: var(--tertiaryColor);
-    margin: 0;
-
-    @media (--minTabletWidth) {
-        width: 572.33px;
-    }
 }
 
 .quote__textWrapper {
