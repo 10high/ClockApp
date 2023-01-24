@@ -3,7 +3,6 @@
 
 .stats__container {
     display: flex;
-    margin: 40px 0 0 0;
     background-color: var(--statsBackgroundColor);
     backdrop-filter: blur(20.3871px);
 
@@ -18,7 +17,8 @@
 
 .stats__container--expand {
     height: calc(100vh - 411px);
-    transition: height 0.25s ease-in-out;
+    margin: 40px 0 0 0;
+    transition: all 0.25s ease-in-out;
 
     @media (--minTabletWidth) {
         height: calc(100vh - 584px);
@@ -31,7 +31,8 @@
 
 .stats__container--shrink {
     height: 0;
-    transition: height 0.25s ease-in-out;
+    margin: 0;
+    transition: all 0.25s ease-in-out;
 }
 
 .stats {
@@ -40,9 +41,6 @@
 
     @media (--minTabletWidth) {
         width: 538px;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 0;
     }
 
     @media (--minDesktopWidth) {
@@ -62,6 +60,12 @@
     gap: 16px;
     opacity: 1;
     transition: opacity 0.3s ease-in;
+
+    @media (--minTabletWidth) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
 }
 
 .stats__itemGroupWrapper {
@@ -70,7 +74,6 @@
     gap: 16px;
 
     @media (--minTabletWidth) {
-        /* flex-direction: row; */
         gap: 48px;
         justify-content: space-between;
     }
