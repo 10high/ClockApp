@@ -14,17 +14,6 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
-body {
-    min-height: 100vh;
-}
-
-/* main {
-
-    width: 100vw;
-    height: 100vh;
-} */
-
-
 
 .backgroundImage {
     background-repeat: no-repeat;
@@ -48,6 +37,7 @@ body {
 
 .backgroundImage--night {
     background-image: url(./assets/mobile/bg-image-nighttime.jpg);
+    background-color: black;
 
     @media (--minTabletWidth) {
         background-image: url(./assets/tablet/bg-image-nighttime.jpg);
