@@ -9,32 +9,32 @@
 
 .imposter--expanded {
     height: 595.33px;
-    margin: 31.67px 0 0 0;
+    margin: 31.67px 0 40px 26px;
     transition: all 0.25s ease-in-out;
 
     @media (--minTabletWidth) {
         height: 880px;
-        margin: 80px 0 0 64px;
+        margin: 80px 0 64px 64px;
     }
 
     @media (--minDesktopWidth) {
         height: 646px;
-        margin: 80px 0 0 0;
+        margin: 80px 0 98px 165px;
     }
 }
 
 .imposter--shrink {
     height: 272px;
-    margin: 99px 0 0 0;
+    margin: 99px 0 40px 26px;
     transition: all 0.25s ease-in-out;
 
     @media (--minTabletWidth) {
         height: 367px;
-        margin: 153px 0 0 64px;
+        margin: 153px 0 64px 64px;
     }
 
     @media (--minDesktopWidth) {
         height: 288px;
-        margin: 56px 0 0 0;
+        margin: 56px 0 56px 165px;
     }
 }

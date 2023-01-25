@@ -2,48 +2,44 @@
 @custom-media --minDesktopWidth (min-width: 1440px);
 
 .stats__container {
+    width: 100%;
     display: flex;
+    justify-content: flex-start;
     background-color: var(--statsBackgroundColor);
     backdrop-filter: blur(20.3871px);
 
-    /* @media (--minTabletWidth) {
-        margin: 64px 0 0 0;
-    }
-
-    @media (--minDesktopWidth) {
-        margin: 56px 0 0 0;
-    } */
 }
 
 .stats__container--expand {
-    height: auto;
-    /* margin: 40px 0 0 0; */
+    height: 256px;
     transition: all 0.25s ease-in-out;
 
-    /* @media (--minTabletWidth) {
-        height: calc(100vh - 584px);
+    @media (--minTabletWidth) {
+        height: 440px;
     }
 
     @media (--minDesktopWidth) {
-        height: calc(100vh - 400px);
-    } */
+        height: 400px;
+    }
 }
 
 .stats__container--shrink {
     height: 0;
-    /* margin: 0; */
     transition: all 0.25s ease-in-out;
 }
 
 .stats {
     width: 323px;
+    margin: auto 0 auto 26px;
     /* margin: 48px auto auto auto; */
 
     @media (--minTabletWidth) {
         width: 538px;
+        margin: auto 0 auto 64px;
     }
 
     @media (--minDesktopWidth) {
+        margin: auto 0 auto 165px;
         width: 844px;
     }
 }

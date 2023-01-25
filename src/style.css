@@ -25,18 +25,11 @@ body {
 
 main {
     min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-    @media (--minTabletWidth) {
-        align-items: flex-start;
-    }
-
-    @media (--minDesktopWidth) {
-        align-items: center;
-    }
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 
