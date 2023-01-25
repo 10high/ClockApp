@@ -2,7 +2,7 @@
 
 
 const buttonElementsManager = {
-    buttonElementIds: ["buttonMore", "quoteContainer", "quote", "statsContainer", "stats", "buttonLess"],
+    buttonElementIds: ["buttonMore", "imposter", "quote", "statsContainer", "stats", "buttonLess"],
     buttonElements: {},
     getElements() {
         for (let elementId of this.buttonElementIds) {
@@ -12,8 +12,8 @@ const buttonElementsManager = {
 }
 
 const buttonMoreAction = () => {
-    buttonElementsManager.buttonElements.quoteContainer.classList.add("quote__container--shrink");
-    buttonElementsManager.buttonElements.quoteContainer.classList.remove("quote__container--expand");
+    buttonElementsManager.buttonElements.imposter.classList.add("imposter--shrink");
+    buttonElementsManager.buttonElements.imposter.classList.remove("imposter--expanded");
     buttonElementsManager.buttonElements.quote.classList.add("quote--hidden");
     buttonElementsManager.buttonElements.quote.classList.remove("quote--visible");
 
@@ -27,8 +27,8 @@ const buttonMoreAction = () => {
 }
 
 const buttonLessAction = () => {
-    buttonElementsManager.buttonElements.quoteContainer.classList.remove("quote__container--shrink");
-    buttonElementsManager.buttonElements.quoteContainer.classList.add("quote__container--expand");
+    buttonElementsManager.buttonElements.imposter.classList.remove("imposter--shrink");
+    buttonElementsManager.buttonElements.imposter.classList.add("imposter--expanded");
     buttonElementsManager.buttonElements.quote.classList.remove("quote--hidden");
     buttonElementsManager.buttonElements.quote.classList.add("quote--visible");
 

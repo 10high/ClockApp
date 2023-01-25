@@ -5,6 +5,7 @@
 @import "./components/clock.css";
 @import "./components/button.css";
 @import "./components/stats.css";
+@import "./layout/imposter.css";
 @import "./layout/stack.css";
 
 @custom-media --minTabletWidth (min-width: 768px);
@@ -13,6 +14,31 @@
 html {
     font-family: 'Inter', sans-serif;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+main {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media (--minTabletWidth) {
+        align-items: flex-start;
+    }
+
+    @media (--minDesktopWidth) {
+        align-items: center;
+    }
+}
+
 
 
 .backgroundImage {

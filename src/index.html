@@ -14,7 +14,7 @@
 
 <body class="backgroundImage">
   <main>
-    <div id="quoteContainer" class="quote__container quote__container--expand">
+    <div id="imposter" class="imposter imposter--expanded">
 
       <figure id="quote" class="quote quote--visible">
         <div class="quote__textWrapper">
@@ -30,42 +30,43 @@
         </div>
         <figcaption id="quoteAuthor" class="quote__author">Ada Lovelace</figcaption>
       </figure>
-    </div>
 
-    <div class="stack">
-      <article class="clock">
-        <div id="clockWelcomeMessageWrapper" class="clock__welcomeMessageWrapper">
-          <h2> <span id="clockWelcomeMessage" class="clock__welcomeMessage">Good morning(dummy)</span><span
-              class="clock__welcomeMessage--toggleDisplay">, it's
-              currently</span> </h2>
+
+      <div class="stack">
+        <article class="clock">
+          <div id="clockWelcomeMessageWrapper" class="clock__welcomeMessageWrapper">
+            <h2> <span id="clockWelcomeMessage" class="clock__welcomeMessage">Good morning(dummy)</span><span
+                class="clock__welcomeMessage--toggleDisplay">, it's
+                currently</span> </h2>
+          </div>
+          <p class="clock__timeWrapper"><span id="clockTime" class="clock__time">12:00(dummy)</span> <span
+              id="clockTimezone" class="clock__timezone">CET(dummy)</span></p>
+          <p class="clock__location">in <span id="clockCity" class="clock__city">Dortmund</span>, <span
+              id="clockCountry" class="clock__country">DE</span>
+          </p>
+        </article>
+        <div>
+          <button id="buttonMore" class="button" type="button">
+            <div class="button__contentWrapperAll button__contentWrapperMore">
+              <span class="button__text">More</span>
+              <svg class="button__icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="#303030" />
+                <path d="M11.2 13.6001L16 18.4001L20.8 13.6001" stroke="white" stroke-width="2" />
+              </svg>
+            </div>
+          </button>
+          <button id="buttonLess" class="button" type="button" hidden="true">
+            <div class="button__contentWrapperAll button__contentWrapperLess">
+              <span class="button__text">Less</span>
+              <svg class="button__icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="#303030" />
+                <path d="M11.2 18.3999L16 13.5999L20.8 18.3999" stroke="white" stroke-width="2" />
+              </svg>
+            </div>
+          </button>
         </div>
-        <p class="clock__timeWrapper"><span id="clockTime" class="clock__time">12:00(dummy)</span> <span
-            id="clockTimezone" class="clock__timezone">CET(dummy)</span></p>
-        <p class="clock__location">in <span id="clockCity" class="clock__city">Dortmund</span>, <span id="clockCountry"
-            class="clock__country">DE</span>
-        </p>
-      </article>
-      <div>
-        <button id="buttonMore" class="button" type="button">
-          <div class="button__contentWrapperAll button__contentWrapperMore">
-            <span class="button__text">More</span>
-            <svg class="button__icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" fill="#303030" />
-              <path d="M11.2 13.6001L16 18.4001L20.8 13.6001" stroke="white" stroke-width="2" />
-            </svg>
-          </div>
-        </button>
-        <button id="buttonLess" class="button" type="button" hidden="true">
-          <div class="button__contentWrapperAll button__contentWrapperLess">
-            <span class="button__text">Less</span>
-            <svg class="button__icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" fill="#303030" />
-              <path d="M11.2 18.3999L16 13.5999L20.8 18.3999" stroke="white" stroke-width="2" />
-            </svg>
-          </div>
-        </button>
       </div>
     </div>
 

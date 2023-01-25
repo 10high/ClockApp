@@ -6,38 +6,38 @@
     background-color: var(--statsBackgroundColor);
     backdrop-filter: blur(20.3871px);
 
-    @media (--minTabletWidth) {
+    /* @media (--minTabletWidth) {
         margin: 64px 0 0 0;
     }
 
     @media (--minDesktopWidth) {
         margin: 56px 0 0 0;
-    }
+    } */
 }
 
 .stats__container--expand {
-    height: calc(100vh - 411px);
-    margin: 40px 0 0 0;
+    height: auto;
+    /* margin: 40px 0 0 0; */
     transition: all 0.25s ease-in-out;
 
-    @media (--minTabletWidth) {
+    /* @media (--minTabletWidth) {
         height: calc(100vh - 584px);
     }
 
     @media (--minDesktopWidth) {
         height: calc(100vh - 400px);
-    }
+    } */
 }
 
 .stats__container--shrink {
     height: 0;
-    margin: 0;
+    /* margin: 0; */
     transition: all 0.25s ease-in-out;
 }
 
 .stats {
     width: 323px;
-    margin: 48px auto auto auto;
+    /* margin: 48px auto auto auto; */
 
     @media (--minTabletWidth) {
         width: 538px;
