@@ -33,6 +33,11 @@
     }
 }
 
+.clock__welcomeMessage {
+    margin: 0 0 0 16px;
+
+}
+
 .clock__welcomeMessage--toggleDisplay {
     display: none;
 
