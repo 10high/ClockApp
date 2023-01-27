@@ -1,0 +1,24 @@
+{
+  "name": "Clock-App",
+  "source": "./src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "./docs"
+    }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --public-url /Clock-App/"
+  },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "nesting": true,
+      "customMedia": true
+    }
+  },
+  "devDependencies": {
+    "@parcel/resolver-glob": "^2.8.2",
+    "parcel": "^2.8.2"
+  }
+}
