@@ -75,8 +75,8 @@ const displayClock = async () => {
     await apiTime();
     displayWelcomeMessage();
     displayTime();
-    /* await apiLocation();
-    displayLocation(); */
+    await apiLocation();
+    displayLocation();
 }
 
 export { displayClock }

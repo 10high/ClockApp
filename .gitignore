@@ -16,13 +16,15 @@
 
 .prettierignore
 _exclude/
-_apiKeys/
 node_modules/
 .parcel-cache/
 dist/
+functions/
 
 
 
 ## package-lock.json
 ## package.json
 ## .parcelrc
+# Local Netlify folder
+.netlify
