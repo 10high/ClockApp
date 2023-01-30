@@ -1,15 +1,10 @@
 {
-  "name": "Clock-App",
+  "name": "ClockApp",
   "source": "./src/index.html",
-  "targets": {
-    "default": {
-      "distDir": "./docs"
-    }
-  },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --public-url /Clock-App/"
+    "build": "parcel build --public-url /ClockApp/"
   },
   "@parcel/transformer-css": {
     "drafts": {
