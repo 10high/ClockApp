@@ -18,13 +18,10 @@
 _exclude/
 node_modules/
 .parcel-cache/
-dist/
 functions/
+dist/
 
 
 
-## package-lock.json
-## package.json
-## .parcelrc
 # Local Netlify folder
 .netlify
