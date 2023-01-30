@@ -18,7 +18,6 @@
 _exclude/
 node_modules/
 .parcel-cache/
-functions/
 dist/
 
 
