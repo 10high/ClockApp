@@ -9,14 +9,9 @@ import { addButtonAction } from "./components/button";
 import { statsColors } from "./components/stats";
 
 
-const initialFetchApisAndDisplayContent = async () => {
-    await displayClock();
-    displayStats();
-    await displayQuote();
-}
-
 const manageBackgroundImage = () => {
     const hours = clockData.hours;
+    console.log("this is hours " + hours);
     const backgroundElement = document.querySelector("body");
     if (hours <= 5 || hours >= 18) {
         backgroundElement.classList.remove("backgroundImage--day");
@@ -27,12 +22,18 @@ const manageBackgroundImage = () => {
     }
 }
 
+const initialFetchApisAndDisplayContent = async () => {
+    await displayClock();
+    displayStats();
+    await displayQuote();
+    manageBackgroundImage();
+    statsColors();
+}
+
 
 getRefreshElements();
 initialFetchApisAndDisplayContent();
-manageBackgroundImage();
 addButtonAction();
 addRefreshAction();
-statsColors();
 
 
