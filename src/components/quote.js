@@ -1,4 +1,6 @@
 import { apiQuote } from "../api/quote";
+import { clockData } from "../global/clockData";
+import { displayError } from "../global/error";
 
 
 const quoteElementsManager = {
@@ -12,15 +14,23 @@ const quoteElementsManager = {
 }
 
 const displayQuote = async () => {
-    const data = await apiQuote();
-    quoteElementsManager.quoteElements.quoteText.innerText = data.content;
-    quoteElementsManager.quoteElements.quoteAuthor.innerText = data.author;
+    quoteElementsManager.quoteElements.quoteText.innerText = clockData.quoteContent;
+    quoteElementsManager.quoteElements.quoteAuthor.innerText = clockData.quoteAuthor;
 }
 
 const getRefreshElements = () => quoteElementsManager.getElements();
 
+const updateQuote = async () => {
+    await apiQuote();
+    if (clockData.apiErrors.length > 0) {
+        displayError();
+    } else {
+        displayQuote();
+    }
+}
+
 const addRefreshAction = () => {
-    quoteElementsManager.quoteElements.quoteRefresh.addEventListener("pointerdown", displayQuote);
+    quoteElementsManager.quoteElements.quoteRefresh.addEventListener("pointerdown", updateQuote);
 }
 
 export { getRefreshElements, displayQuote, addRefreshAction }

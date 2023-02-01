@@ -14,8 +14,14 @@
 
 <body class="backgroundImage">
   <main>
-    <div id="imposter" class="imposter imposter--expanded">
 
+    <section id="error" hidden="true">
+      <h2>Service Unavailable</h2>
+      <p>Sorry, something went wrong :(</p>
+      <p>Please refresh the page or try again later.</p>
+    </section>
+
+    <div id="imposter" class="imposter imposter--expanded" hidden="true">
       <figure id="quote" class="quote quote--visible">
         <div class="quote__textWrapper">
           <blockquote id="quoteText" class="quote__text">
@@ -30,7 +36,6 @@
         </div>
         <figcaption id="quoteAuthor" class="quote__author">Ada Lovelace</figcaption>
       </figure>
-
 
       <div class="stack">
         <article class="clock">

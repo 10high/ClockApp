@@ -1,2 +1,4 @@
 
-export const clockData = {};
+export const clockData = {
+    apiErrors: []
+};

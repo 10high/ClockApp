@@ -71,11 +71,9 @@ const displayLocation = () => {
     document.querySelector("#clockCountry").innerText = clockData.countryAbbreviated;
 }
 
-const displayClock = async () => {
-    await apiTime();
+const displayClock = () => {
     displayWelcomeMessage();
     displayTime();
-    await apiLocation();
     displayLocation();
 }
 

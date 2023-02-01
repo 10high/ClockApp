@@ -1,33 +1,38 @@
+import { apiTime } from "./api/time";
+import { apiLocation } from "./api/location";
+import { apiQuote } from "./api/quote";
 import { displayClock } from "./components/clock";
 import { displayStats } from "./components/stats";
 import { displayQuote } from "./components/quote";
 import { getRefreshElements } from "./components/quote";
 import { addRefreshAction } from "./components/quote";
 import { clockData } from "./global/clockData";
+import { manageBackgroundImage } from "./global/backgroundImage";
 
 import { addButtonAction } from "./components/button";
 import { statsColors } from "./components/stats";
 
 
-const manageBackgroundImage = () => {
-    const hours = clockData.hours;
-    console.log("this is hours " + hours);
-    const backgroundElement = document.querySelector("body");
-    if (hours <= 5 || hours >= 18) {
-        backgroundElement.classList.remove("backgroundImage--day");
-        backgroundElement.classList.add("backgroundImage--night");
-    } else {
-        backgroundElement.classList.remove("backgroundImage--night");
-        backgroundElement.classList.add("backgroundImage--day");
-    }
+
+
+const displayError = () => {
+    document.querySelector("#error").hidden = false;
+    document.querySelector("#imposter").hidden = true;
 }
 
 const initialFetchApisAndDisplayContent = async () => {
-    await displayClock();
-    displayStats();
-    await displayQuote();
-    manageBackgroundImage();
-    statsColors();
+    await apiTime();
+    await apiLocation();
+    await apiQuote();
+    if (clockData.apiErrors.length > 0) {
+        displayError();
+    } else {
+        displayQuote();
+        displayClock();
+        displayStats();
+        manageBackgroundImage();
+        statsColors();
+    }
 }
 
 
