@@ -1,6 +1,7 @@
 import { apiTime } from "../api/time";
 import { apiLocation } from "../api/location";
 import { clockData } from "../global/clockData";
+import { manageBackgroundImage } from "../global/backgroundImage";
 
 const welcomeMessageIconManager = {
     buildClockWelcomeMessageIconSun() {
@@ -77,4 +78,17 @@ const displayClock = () => {
     displayLocation();
 }
 
-export { displayClock }
+const timedClockRefresh = () => {
+    setInterval(async () => {
+        await apiTime();
+        if (clockData.apiErrors.length > 0) {
+            displayError();
+        } else {
+            document.querySelector(".clock__welcomeMessageIcon").remove();
+            manageBackgroundImage();
+            displayWelcomeMessage();
+            displayTime();
+        }
+    }, 5000);
+}
+export { displayClock, timedClockRefresh }

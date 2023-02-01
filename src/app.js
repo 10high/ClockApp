@@ -8,17 +8,11 @@ import { getRefreshElements } from "./components/quote";
 import { addRefreshAction } from "./components/quote";
 import { clockData } from "./global/clockData";
 import { manageBackgroundImage } from "./global/backgroundImage";
-
+import { displayError } from "./global/error";
 import { addButtonAction } from "./components/button";
 import { statsColors } from "./components/stats";
+import { timedClockRefresh } from "./components/clock";
 
-
-
-
-const displayError = () => {
-    document.querySelector("#error").hidden = false;
-    document.querySelector("#imposter").hidden = true;
-}
 
 const initialFetchApisAndDisplayContent = async () => {
     await apiTime();
@@ -32,6 +26,7 @@ const initialFetchApisAndDisplayContent = async () => {
         displayStats();
         manageBackgroundImage();
         statsColors();
+        timedClockRefresh();
     }
 }
 
