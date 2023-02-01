@@ -1,7 +1,7 @@
 import { clockData } from "../global/clockData";
 
 
-export const apiQuote = async () => {
+/* export const apiQuote = async () => {
     try {
         const resolved = await fetch(`https://api.quotable.io/random?tags=technology`);
         const data = await resolved.json();
@@ -13,6 +13,20 @@ export const apiQuote = async () => {
         }
     }
     catch (error) {
+        clockData.apiErrors.push(true);
+    }
+} */
+
+
+export const apiQuote = () => {
+    const isSuccessful = false;
+    if (isSuccessful) {
+        return new Promise((resolve) => {
+            clockData.quoteAuthor = "TestAuthor";
+            clockData.quoteContent = "This is test monkey quote text";
+            resolve(true);
+        })
+    } else {
         clockData.apiErrors.push(true);
     }
 }

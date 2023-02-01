@@ -18,6 +18,7 @@ const initialFetchApisAndDisplayContent = async () => {
     await apiTime();
     await apiLocation();
     await apiQuote();
+    console.log("success");
     if (clockData.apiErrors.length > 0) {
         displayError();
     } else {
@@ -35,5 +36,6 @@ getRefreshElements();
 initialFetchApisAndDisplayContent();
 addButtonAction();
 addRefreshAction();
-
+const test = clockData;
+console.log(test);
 
