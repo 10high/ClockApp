@@ -7,7 +7,11 @@ export const apiTime = async () => {
             const data = await resolved.json();
             const time = new Date(data.datetime);
             clockData.hours = time.getHours();
-            clockData.minutes = time.getMinutes();
+            const minutes = time.getMinutes();
+            if (minutes < 10) {
+                minutes = `0${minutes}`;
+            };
+            clockData.minutes = minutes;
             clockData.timezoneFull = data.timezone;
             clockData.timezoneAbbreviation = data.abbreviation;
             clockData.weekNumber = data.week_number;
