@@ -29,7 +29,7 @@ import { clockData } from "../global/clockData";
 
 
 export const apiTime = () => {
-    const isSuccessful = false;
+    const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
             clockData.hours = 11;

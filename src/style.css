@@ -32,7 +32,10 @@ main {
     justify-content: space-between;
 }
 
-
+.main--error {
+    justify-content: center !important;
+    align-items: center !important;
+}
 
 .backgroundImage {
     background-repeat: no-repeat;

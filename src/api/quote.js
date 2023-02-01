@@ -19,7 +19,7 @@ import { clockData } from "../global/clockData";
 
 
 export const apiQuote = () => {
-    const isSuccessful = false;
+    const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
             clockData.quoteAuthor = "TestAuthor";

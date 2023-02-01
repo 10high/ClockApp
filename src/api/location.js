@@ -20,7 +20,7 @@ import { clockData } from "../global/clockData";
 
 
 export const apiLocation = () => {
-    const isSuccessful = false;
+    const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
             clockData.city = "DortMonkey";
