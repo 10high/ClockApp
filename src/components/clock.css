@@ -14,20 +14,19 @@
 }
 
 .clock__welcomeMessageWrapper h2 {
-    font-size: 0.9375rem;
+    font-size: clamp(0.9375rem, 0.7633587786259542vw + 0.7585877862595419rem, 1.125rem);
     line-height: 1.6667;
     letter-spacing: 0.1875rem;
     font-weight: 400;
     margin: 0;
 
     @media (--minTabletWidth) {
-        font-size: 1.125rem;
+        font-size: clamp(1.125rem, 0.2976190476190476vw + 0.9821428571428571rem, 1.25rem);
         line-height: 1.5555;
         letter-spacing: 0.225rem;
     }
 
     @media (--minDesktopWidth) {
-        font-size: 1.25rem;
         line-height: 1.4;
         letter-spacing: 0.25rem;
     }
@@ -52,21 +51,20 @@
 }
 
 .clock__time {
-    font-size: 6.25rem;
+    font-size: clamp(6.25rem, 19.083969465648856vw + 1.7771946564885497rem, 10.9375rem);
     line-height: 1;
     letter-spacing: -0.1563rem;
     font-weight: 700;
     margin: 0 5px 0 0;
 
     @media (--minTabletWidth) {
-        font-size: 10.9375rem;
+        font-size: clamp(10.9375rem, 3.7202380952380953vw + 9.151785714285714rem, 12.5rem);
         line-height: 1;
         letter-spacing: -0.28rem;
         margin: 0 12px 0 0;
     }
 
     @media (--minDesktopWidth) {
-        font-size: 12.5rem;
         line-height: 1;
         letter-spacing: -0.3125rem;
         margin: 0 11px 0 0;
@@ -74,38 +72,36 @@
 }
 
 .clock__timezone {
-    font-size: 0.9375rem;
+    font-size: clamp(0.9375rem, 4.325699745547074vw + -0.07633587786259542rem, 2rem);
     line-height: 1.867;
     letter-spacing: 0;
     font-weight: 300;
     margin: 0 0 0 0;
 
     @media (--minTabletWidth) {
-        font-size: 2rem;
+        font-size: clamp(2rem, 1.1904761904761905vw + 1.4285714285714286rem, 2.5rem);
         line-height: 0.875;
     }
 
     @media (--minDesktopWidth) {
-        font-size: 2.5rem;
         line-height: 0.7;
     }
 }
 
 .clock__location {
-    font-size: 0.9375rem;
+    font-size: clamp(0.9375rem, 0.7633587786259542vw + 0.7585877862595419rem, 1.125rem);
     line-height: 1.867;
     letter-spacing: 0.1875rem;
     font-weight: 700;
     margin: 16px 0 0 0;
 
     @media (--minTabletWidth) {
-        font-size: 1.125rem;
+        font-size: clamp(1.125rem, 0.8928571428571429vw + 0.6964285714285714rem, 1.5rem);
         line-height: 1.555;
         letter-spacing: 0.225rem;
     }
 
     @media (--minDesktopWidth) {
-        font-size: 1.5rem;
         line-height: 1.167;
         letter-spacing: 0.3rem;
     }

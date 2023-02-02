@@ -29,26 +29,24 @@
 
 .quote__text {
     width: 290px;
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 1.5267175572519085vw + 0.39217557251908397rem, 1.125rem);
     font-weight: 400;
     line-height: 1.8333;
     margin: 0;
 
     @media (--minTabletWidth) {
         width: 540px;
-        font-size: 1.125rem;
         line-height: 1.5555;
     }
 }
 
 .quote__author {
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 1.5267175572519085vw + 0.39217557251908397rem, 1.125rem);
     font-weight: 700;
     line-height: 1.8333;
     margin: 8px 0 0 0;
 
     @media (--minTabletWidth) {
-        font-size: 1.125rem;
         line-height: 1.5555;
     }
 }
