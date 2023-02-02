@@ -18,8 +18,24 @@ import { clockData } from "../global/clockData";
     }
 } */
 
+export const apiLocation = async () => {
+    try {
+        const resolved = await fetch("../../functions/apisecret");
+        const ipBaseData = await resolved.json();
+        if (resolved.ok) {
+            clockData.city = ipBaseData.data.location.city.name_translated;
+            clockData.countryAbbreviated = ipBaseData.data.location.country.alpha2;
+        } else {
+            clockData.apiErrors.push(true);
+        }
+    }
+    catch {
+        clockData.apiErrors.push(true);
+    }
+}
 
-export const apiLocation = () => {
+
+/* export const apiLocation = () => {
     const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
@@ -30,4 +46,4 @@ export const apiLocation = () => {
     } else {
         clockData.apiErrors.push(true);
     }
-}
+} */

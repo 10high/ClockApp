@@ -1,6 +1,6 @@
 import { clockData } from "../global/clockData";
 
-/* export const apiTime = async () => {
+export const apiTime = async () => {
     try {
         const resolved = await fetch(`https://worldtimeapi.org/api/ip`);
         if (resolved.ok) {
@@ -17,6 +17,7 @@ import { clockData } from "../global/clockData";
             clockData.weekNumber = data.week_number;
             clockData.dayOfYear = data.day_of_year;
             clockData.dayOfWeek = data.day_of_week;
+            clockDate.userip = date.client_ip;
         } else {
             clockData.apiErrors.push(true);
         }
@@ -24,11 +25,11 @@ import { clockData } from "../global/clockData";
     catch (error) {
         clockData.apiErrors.push(true);
     }
-} */
+}
 
 
 
-export const apiTime = () => {
+/* export const apiTime = () => {
     const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
@@ -48,4 +49,4 @@ export const apiTime = () => {
     } else {
         clockData.apiErrors.push(true);
     }
-}
+} */

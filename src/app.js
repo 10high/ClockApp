@@ -35,4 +35,6 @@ getRefreshElements();
 initialFetchApisAndDisplayContent();
 addButtonAction();
 addRefreshAction();
+const test = clockData;
+console.log(clockData);
 
