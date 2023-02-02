@@ -1,18 +1,18 @@
 const process = require('process')
 
 const axios = require('axios')
-/* const qs = require('qs') */
+const qs = require('qs')
 
 const handler = async function (event) {
   // apply our function to the queryStringParameters and assign it to a variable
-  /* const API_PARAMS = qs.stringify(event.queryStringParameters)
-  console.log('API_PARAMS', API_PARAMS) */
+  const userip = event.queryStringParameters.userip
+  console.log('USER_IP', userip)
   // Get env var values defined in our Netlify site UI
 
   // TODO: customize your URL and API keys set in the Netlify Dashboard
   // this is secret too, your frontend won't see this
   const { API_SECRET, API_URL } = process.env
-  const URL = `${API_URL}${API_SECRET}`
+  const URL = `${API_URL}${API_SECRET}&ip=${userip}`
 
   console.log('Constructed URL is ...', URL)
 

@@ -3,7 +3,7 @@ import { clockData } from "../global/clockData";
 
 export const apiLocation = async () => {
     try {
-        const resolved = await fetch("/.netlify/functions/apisecret" + "&ip=" + clockData.userip);
+        const resolved = await fetch(`/.netlify/functions/apisecret?userip=${clockData.userip}`);
         const ipBaseData = await resolved.json();
         clockData.city = ipBaseData.data.location.city.name_translated;
         clockData.countryAbbreviated = ipBaseData.data.location.country.alpha2;
