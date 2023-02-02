@@ -1,7 +1,7 @@
 import { apiTime } from "../api/time";
-import { apiLocation } from "../api/location";
 import { clockData } from "../global/clockData";
 import { manageBackgroundImage } from "../global/backgroundImage";
+import { displayError } from "../global/error";
 
 const welcomeMessageIconManager = {
     buildClockWelcomeMessageIconSun() {

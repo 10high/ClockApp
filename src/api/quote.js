@@ -9,10 +9,12 @@ export const apiQuote = async () => {
             clockData.quoteAuthor = data.author;
             clockData.quoteContent = data.content;
         } else {
+            console.log("quote is pushing error from else");
             clockData.apiErrors.push(true);
         }
     }
     catch (error) {
+        console.log("quote is pushing error from catch");
         clockData.apiErrors.push(true);
     }
 }

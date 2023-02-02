@@ -7,7 +7,7 @@ export const apiTime = async () => {
             const data = await resolved.json();
             const time = new Date(data.datetime);
             clockData.hours = time.getHours();
-            const minutes = time.getMinutes();
+            let minutes = time.getMinutes();
             if (minutes < 10) {
                 minutes = `0${minutes}`;
             };
@@ -17,13 +17,16 @@ export const apiTime = async () => {
             clockData.weekNumber = data.week_number;
             clockData.dayOfYear = data.day_of_year;
             clockData.dayOfWeek = data.day_of_week;
-            clockDate.userip = date.client_ip;
+            clockData.userip = data.client_ip;
         } else {
+            console.log("time is pushing error from else");
             clockData.apiErrors.push(true);
         }
     }
     catch (error) {
         clockData.apiErrors.push(true);
+        console.log("this is catch error" + error);
+        console.log("time is pushing error from catch");
     }
 }
 

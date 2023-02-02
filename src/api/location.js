@@ -1,35 +1,15 @@
 import { clockData } from "../global/clockData";
 
 
-/* export const apiLocation = async () => {
-    try {
-        const apiSecret = process.env.API_SECRET;
-        const resolved = await fetch(`https://api.ipbase.com/v2/info?apikey=${apiSecret}`);
-        const ipBaseData = await resolved.json();
-        if (resolved.ok) {
-            clockData.city = ipBaseData.data.location.city.name_translated;
-            clockData.countryAbbreviated = ipBaseData.data.location.country.alpha2;
-        } else {
-            clockData.apiErrors.push(true);
-        }
-    }
-    catch {
-        clockData.apiErrors.push(true);
-    }
-} */
-
 export const apiLocation = async () => {
     try {
-        const resolved = await fetch("../../functions/apisecret");
+        const resolved = await fetch("/.netlify/functions/apisecret");
         const ipBaseData = await resolved.json();
-        if (resolved.ok) {
-            clockData.city = ipBaseData.data.location.city.name_translated;
-            clockData.countryAbbreviated = ipBaseData.data.location.country.alpha2;
-        } else {
-            clockData.apiErrors.push(true);
-        }
+        clockData.city = ipBaseData.data.location.city.name_translated;
+        clockData.countryAbbreviated = ipBaseData.data.location.country.alpha2;
     }
     catch {
+        console.log("location pushed error from catch");
         clockData.apiErrors.push(true);
     }
 }

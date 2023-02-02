@@ -16,8 +16,11 @@ import { timedClockRefresh } from "./components/clock";
 
 const initialFetchApisAndDisplayContent = async () => {
     await apiTime();
+    console.log("time success");
     await apiLocation();
+    console.log("location success");
     await apiQuote();
+    console.log("quote success");
     if (clockData.apiErrors.length > 0) {
         displayError();
     } else {
@@ -36,5 +39,5 @@ initialFetchApisAndDisplayContent();
 addButtonAction();
 addRefreshAction();
 const test = clockData;
-console.log(clockData);
+console.log(test);
 
