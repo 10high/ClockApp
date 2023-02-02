@@ -6,6 +6,7 @@
     background-color: var(--tertiaryColor);
     border-style: none;
     padding: 0;
+    --buttonFillColor: #303030;
 }
 
 .button__contentWrapperAll {
@@ -54,5 +55,12 @@
     @media (--minTabletWidth) {
         height: 40px;
         width: auto;
+    }
+}
+
+@media (hover: hover) {
+    .button:hover {
+        --buttonFillColor: #999999;
+        cursor: pointer;
     }
 }

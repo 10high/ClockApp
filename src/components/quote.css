@@ -55,3 +55,9 @@
     width: 16.67px;
     height: 16.67px;
 }
+
+@media (hover: hover) {
+    .quote__refresh:hover {
+        cursor: pointer;
+    }
+}
