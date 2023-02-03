@@ -19,8 +19,8 @@ export const apiLocation = async () => {
     const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
-            clockData.city = "DortMonkey";
-            clockData.countryAbbreviated = "MO";
+            clockData.city = "London";
+            clockData.countryAbbreviated = "UK";
             resolve(true);
         })
     } else {

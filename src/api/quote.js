@@ -24,8 +24,8 @@ export const apiQuote = async () => {
     const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
-            clockData.quoteAuthor = "TestAuthor";
-            clockData.quoteContent = "This is test monkey quote text";
+            clockData.quoteAuthor = "Ada Lovelace";
+            clockData.quoteContent = "The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.";
             resolve(true);
         })
     } else {

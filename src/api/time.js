@@ -37,16 +37,16 @@ export const apiTime = async () => {
     if (isSuccessful) {
         return new Promise((resolve) => {
             clockData.hours = 11;
-            let minutes = 45;
+            let minutes = 37;
             if (minutes < 10) {
                 minutes = `0${minutes}`;
             };
             clockData.minutes = minutes;
-            clockData.timezoneFull = "Berlin/Monkeyland";
-            clockData.timezoneAbbreviation = "MY";
-            clockData.weekNumber = 66;
-            clockData.dayOfYear = 667;
-            clockData.dayOfWeek = 8;
+            clockData.timezoneFull = "Europe/London";
+            clockData.timezoneAbbreviation = "BST";
+            clockData.weekNumber = 42;
+            clockData.dayOfYear = 295;
+            clockData.dayOfWeek = 5;
             resolve(true);
         })
     } else {

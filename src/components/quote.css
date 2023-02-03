@@ -32,12 +32,22 @@
     font-size: clamp(0.75rem, 1.5267175572519085vw + 0.39217557251908397rem, 1.125rem);
     font-weight: 400;
     line-height: 1.8333;
-    margin: 0;
+    margin: 0 16.67px 0 0;
+    quotes: "“" "”" "‘" "’";
 
     @media (--minTabletWidth) {
         width: 540px;
         line-height: 1.5555;
+        margin: 0 15.67px 0 0;
     }
+}
+
+.quote__text::before {
+    content: open-quote;
+}
+
+.quote__text::after {
+    content: close-quote;
 }
 
 .quote__author {
@@ -48,12 +58,14 @@
 
     @media (--minTabletWidth) {
         line-height: 1.5555;
+        margin: 13px 0 0 0;
     }
 }
 
 .quote__refresh {
     width: 16.67px;
     height: 16.67px;
+    margin: 10.67px 0 0 0;
 }
 
 @media (hover: hover) {

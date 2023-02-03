@@ -63,7 +63,8 @@ const displayWelcomeMessage = () => {
 }
 
 const displayTime = () => {
-    document.querySelector("#clockTime").innerText = `${clockData.hours}:${clockData.minutes}`;
+    document.querySelector("#clockTimeHours").innerText = `${clockData.hours}`;
+    document.querySelector("#clockTimeMinutes").innerText = `${clockData.minutes}`;
     document.querySelector("#clockTimezone").innerText = clockData.timezoneAbbreviation;
 }
 
