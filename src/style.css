@@ -37,6 +37,16 @@ main {
     align-items: center !important;
 }
 
+.sr-only {
+    position: absolute;
+    margin: -1px;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .backgroundImage {
     background-repeat: no-repeat;
     background-size: cover;

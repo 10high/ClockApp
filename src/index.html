@@ -15,6 +15,8 @@
 <body class="backgroundImage">
   <main>
 
+    <h1 class="sr-only">A Clock App that uses your location to provide basic time and date info</h1>
+
     <section id="error" class="error" hidden="true">
       <h2>Service Unavailable</h2>
       <p>Sorry, something went wrong :(</p>
@@ -47,7 +49,8 @@
           </div>
           <p class="clock__timeWrapper"><span id="clockTimeHours" class="clock__time">12</span><span
               class="clock__time clock__timeColon">:</span><span id="clockTimeMinutes" class="clock__time">00</span>
-            <span id="clockTimezone" class="clock__timezone">CET</span></p>
+            <span id="clockTimezone" class="clock__timezone">CET</span>
+          </p>
           <p class="clock__location">in <span id="clockCity" class="clock__city">London</span>, <span id="clockCountry"
               class="clock__country">UK</span>
           </p>
@@ -79,6 +82,7 @@
 
     <div id="statsContainer" class="stats__container stats__container--shrink">
       <article id="stats" class="stats stats--hidden">
+        <h2 class="sr-only">Information on your time zone and the day of the year</h2>
         <div class="stats__itemGroupWrapper">
           <article class="stats__itemGroup">
             <h2 class="stats__header">current timezone</h2>
