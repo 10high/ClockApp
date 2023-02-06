@@ -62,6 +62,15 @@
     }
 }
 
+.stats div:nth-child(2) {
+    @media (--minDesktopWidth) {
+        padding-left: 94px;
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-left-color: #30303025;
+    }
+}
+
 .stats__itemGroupWrapper {
     display: flex;
     flex-direction: column;
