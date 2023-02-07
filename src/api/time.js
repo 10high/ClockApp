@@ -1,6 +1,6 @@
 import { clockData } from "../global/clockData";
 
-/* export const apiTime = async () => {
+export const apiTime = async () => {
     try {
         const resolved = await fetch(`https://worldtimeapi.org/api/ip`);
         if (resolved.ok) {
@@ -28,11 +28,11 @@ import { clockData } from "../global/clockData";
         console.log("this is catch error" + error);
         console.log("time is pushing error from catch");
     }
-} */
+}
 
 
 
-export const apiTime = () => {
+/* export const apiTime = () => {
     const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
@@ -52,4 +52,4 @@ export const apiTime = () => {
     } else {
         clockData.apiErrors.push(true);
     }
-}
+} */

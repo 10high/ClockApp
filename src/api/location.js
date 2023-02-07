@@ -1,7 +1,7 @@
 import { clockData } from "../global/clockData";
 
 
-/* export const apiLocation = async () => {
+export const apiLocation = async () => {
     try {
         const resolved = await fetch(`/.netlify/functions/apisecret?userip=${clockData.userip}`);
         const ipBaseData = await resolved.json();
@@ -12,10 +12,10 @@ import { clockData } from "../global/clockData";
         console.log("location pushed error from catch");
         clockData.apiErrors.push(true);
     }
-} */
+}
 
 
-export const apiLocation = () => {
+/* export const apiLocation = () => {
     const isSuccessful = true;
     if (isSuccessful) {
         return new Promise((resolve) => {
@@ -26,4 +26,4 @@ export const apiLocation = () => {
     } else {
         clockData.apiErrors.push(true);
     }
-}
+} */
