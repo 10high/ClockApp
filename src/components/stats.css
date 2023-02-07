@@ -62,7 +62,7 @@
     }
 }
 
-.stats div:nth-child(2) {
+.stats div:nth-child(3) {
     @media (--minDesktopWidth) {
         padding-left: 94px;
         border-left-style: solid;
